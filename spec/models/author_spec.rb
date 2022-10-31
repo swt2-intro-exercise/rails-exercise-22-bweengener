@@ -3,12 +3,12 @@ describe "Author Model", type: :model do
 
   end
 
-  it 'should have a full_name operation' do
+  it 'should have a full name getter' do
     author = Author.new
     author.first_name = "Alan"
     author.last_name = "Turing"
     author.homepage = "http://wikipedia.org/Alan_Turing"
 
-    expect(author.full_name).to eq("Alan Turing")
+    expect(author.name).to eq("Alan Turing")
   end
 end
