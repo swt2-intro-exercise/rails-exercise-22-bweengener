@@ -6,4 +6,7 @@ class Author < ApplicationRecord
     self.first_name + " " + self.last_name
   end
 
+  def papers
+  end
+
 end
