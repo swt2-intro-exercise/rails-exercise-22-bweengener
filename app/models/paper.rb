@@ -3,6 +3,8 @@ class Paper < ApplicationRecord
   validates :venue, presence: true, allow_blank: false
   validates :year, presence: true, numericality: { only_integer: true }
 
+  scope :published_in, ->(year) { where("year = ?", year) }
+
   has_and_belongs_to_many :authors
 
   def paper_params
