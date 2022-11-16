@@ -13,9 +13,6 @@ class AuthorsController < ApplicationController
   def create
     @article = Author.new(author_params)
 
-    @article.save
-    redirect_to @article
-
     if @article.save
       redirect_to @article
     else
