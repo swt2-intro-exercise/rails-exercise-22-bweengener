@@ -7,6 +7,7 @@ class Author < ApplicationRecord
   end
 
   def papers
+    []
   end
 
 end
