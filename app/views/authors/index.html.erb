@@ -1,3 +1,20 @@
 <h1>Index page</h1>
 
+<h2>All authors:</h2>
+<table id = "authors">
+  <tr>
+    <th>Name</th>
+    <th>Homepage</th>
+    <th></th>
+  </tr>
+  <% @authors.each do |author| %>
+    <tr>
+      <td><%= author.name %></td>
+      <td><%= author.homepage %></td>
+      <td><%= link_to 'Show', author_path(author) %></td>
+    </tr>
+  <% end %>
+  <td><%= link_to 'New', new_author_path %></td>
+</table>
+
 <a href="<%= new_author_path %>">Create a new author</a>
