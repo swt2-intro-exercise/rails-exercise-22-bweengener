@@ -11,10 +11,10 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    @article = Author.new(author_params)
+    @author = Author.new(author_params)
 
-    if @article.save
-      redirect_to @article
+    if @author.save
+      redirect_to @author
     else
       render "new"
     end
